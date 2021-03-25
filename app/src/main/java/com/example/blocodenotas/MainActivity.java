@@ -79,9 +79,6 @@ public class MainActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(MainActivity.this, "PROBLEMA", Toast.LENGTH_SHORT).show();
                         }
-
-                        //ArrayAdapter yourArrayAdapter = (ArrayAdapter) arg0.getAdapter();
-                        //yourArrayAdapter.remove(position);
                         adapter.notifyDataSetChanged();
                     }
                 });
