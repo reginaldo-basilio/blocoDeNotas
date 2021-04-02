@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         );
         listViewNotas.setAdapter(adapter);
 
+        //CLICANDO EM UM ITEM DA LISTA PARA ABRIR NO FORM DE EDITAR NOTA
         listViewNotas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //LONG CLICK PARA GERAR A PERGUNTA SE QUER DELETAR E DELETAR A NOTA
         listViewNotas.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -94,15 +96,5 @@ public class MainActivity extends AppCompatActivity {
                 return true ;
             }
         });
-
-
-
     }
-
-   /*public Integer getIdNota(int idNota){
-        NotaController notaController = new NotaController(this);
-        Nota nota = notaController.getNotaController(idNota);
-        int id = nota.getId();
-        return id;
-    }*/
 }

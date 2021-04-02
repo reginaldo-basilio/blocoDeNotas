@@ -25,16 +25,21 @@ public class editarNotas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_notas);
+
         notaController = new NotaController(getApplicationContext());
         Intent intent = getIntent();
+
         id = (String) intent.getSerializableExtra("id");
         titulo = (String) intent.getSerializableExtra("titulo");
         texto = (String) intent.getSerializableExtra("texto");
-        idVlaue = Integer.parseInt(id);
+
+        idVlaue = Integer.parseInt(id); //SETAR COMO INVISIVEL PARA NAO APARECER NO FORM
+
         edId = findViewById(R.id.edId2);
         edTitulo = findViewById(R.id.edTitulo2);
         edTexto = findViewById(R.id.edTexto2);
         btnAtualizar = (Button) findViewById(R.id.btnAtualizar);
+
         edId.setText(id);
         edTitulo.setText(titulo);
         edTexto.setText(texto);
@@ -55,11 +60,6 @@ public class editarNotas extends AppCompatActivity {
                 }
             }
         );
-
-
-
-
-
 
     }
 }
